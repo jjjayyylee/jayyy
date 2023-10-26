@@ -1,0 +1,14 @@
+package tut01;
+
+public class IntEx {
+   // 나이가 20 이면 성인 이하면 미성년으로 구분하시오.
+	
+	public static void main(String[] args) {
+	int age =20;
+	if(age>20) {
+		System.out.println(" 성인");
+	}else
+		System.out.println("미성년");
+			}
+
+}

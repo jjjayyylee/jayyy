@@ -1,0 +1,25 @@
+package tut02;
+
+public class OperEx {
+
+	public static void main(String[] args) {
+		int num1=5;
+		int num2=10;
+		
+		String s1="koreait";
+		String s2="koreait";
+		//비교
+		System.out.println(num1<num2); //true,false
+		System.out.println(num1==num2);
+		System.out.println(s1.equals(s2));//문자열 동등 비교
+		System.out.println(!s1.equals(s2));
+		
+		//A = B : B를 A에 저장
+		boolean b = (num == num2);
+		
+		//타입에 저장
+		
+
+	}
+
+}

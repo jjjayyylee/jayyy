@@ -1,0 +1,51 @@
+package testPrj;
+
+import java.sql.*;
+import java.lang.reflect.Member;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
+
+class Member{
+	
+	private String mem_id;
+	private String mem_name;
+	private String mem_pwd;
+	private Object mem_gender;
+	private Object mem_intro;
+
+	void inserMember() throws ClassNotFoundException, SQLException {
+		Connection conn = null;
+		PreparedStatement pstmt;
+		ResultSet rs =null;
+		
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		
+		String url ="jdbc:mysql://127.0.0.1:3306/kordb";
+		String uid = "kordb";
+		String pwd ="1234";
+		
+		conn = DriverManager.getConnection(mem_id,mem_name,mem_pwd,mem_gender,mem_intro);
+		String sql ="INSERT INTO member VALUES(null,'홍길동','1234','M','자기소개1')";
+		
+		pstmt = conn.prepareStatement(sql);
+		rs = pstmt.executeQuery();
+		pstmt.execute(sql);
+		System.out.println("회원이 등록되었습니다.");
+
+
+class MemberEx {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		Member mem = new Member();
+		mem.inserMember();
+
+	}
+
+}
+}
+}

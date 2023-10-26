@@ -1,0 +1,14 @@
+package tut01;
+
+public class IncDecEx {
+
+	public static void main(String[] args) {
+		//임의 정수 두 개 생성 후 증감자로 값을 1씩 증가시키거나 감소시키시오.
+		int num1, num2;
+		num1 = 1;
+		num2 = 2;
+		System.out.println(num1++);
+
+	}
+
+}

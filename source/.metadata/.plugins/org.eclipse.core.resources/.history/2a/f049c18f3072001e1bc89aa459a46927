@@ -1,0 +1,93 @@
+package testPrj;
+
+import java.sql.*;
+import java.lang.reflect.Member;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
+
+class MemberCrud{
+	
+	void selectItem() throws ClassNotFoundException, SQLException {
+		Connection conn = null;
+		PreparedStatement pstmt;
+		ResultSet rs =null;
+		
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		
+		String url ="jdbc:mysql://127.0.0.1:3306/kordb";
+		String uid = "kordb";
+		String pwd ="1234";
+		
+		conn = DriverManager.getConnection(id,name,pwd,gender,intro);
+		String sql ="select * from items order by item_id desc";
+		
+		pstmt = conn.prepareStatement(sql);
+		rs = pstmt.executeQuery();
+		
+		while(rs.next()) {// 디비 -> 객체 -> 화면출력
+			Member mem = new Member(); // Items.java
+			
+			((Object) mem).setmem_id(rs.getInt(1));
+			mem.setmem_Name(rs.getString(2));
+			mem.setmem_pwd(rs.getString(3));
+			mem.setmem_gender (rs.getString(4));
+			mem.setmem_intro(rs.getString(5));
+			
+			System.out.println(mem.toString());
+		}
+	}
+	
+	void insertItem() {
+		Connection conn = null;
+		PreparedStatement pstmt;
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
+			String url ="jdbc:mysql://127.0.0.1:3306/kordb";
+			String uid = "kordb";
+			String pwd ="1234";
+			
+			conn = DriverManager.getConnection(url,uid,pwd);
+			String sql= "insert into items values(null,?,?,?,now());";
+			pstmt = conn.prepareStatement(sql);
+			
+			Member mem  = new Member(); //임시값을 객체저장
+			mem.setItemName("한돈");
+			mem.setItemPrice(1000000);
+			mem.setItemStock(10);
+		   
+		   pstmt.setString(1, mem.getItemName()); //실제db저장
+		   pstmt.setInt(2, mem.getItemPrice());
+		   pstmt.setInt(3,mem.getItemStock());
+		   int row = pstmt.executeUpdate();
+		   
+		   if(row>0) {
+			   System.out.println(item.getItemName()+" 상품등록이 완료 되었습니다.");
+		   }else {
+			   System.out.println("상품등록에 실패 하였습니다.\n 확인하세요");
+		   }
+		   
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	
+}
+
+
+
+public class MemberEx {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		ItemCrud crud = new ItemCrud();
+		crud.selectItem();
+
+	}
+
+}

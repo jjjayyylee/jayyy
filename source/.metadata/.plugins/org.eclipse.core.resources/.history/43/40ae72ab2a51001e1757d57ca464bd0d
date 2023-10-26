@@ -1,0 +1,22 @@
+package tut01;
+
+public class CompEx {
+
+	public static void main(String[] args) {
+		//1. 크기비교 : >=, <=, <
+		// 결과는 true, false
+		int num1 = 3;
+		int num2 = 5;
+		boolean res1= (num1 <= num2);
+		System.out.println(res1);
+		
+		//2. 등가비교 : ==, !=
+		boolean res2= (num1 == num2);
+		boolean res3= (num1!= num2);
+		System.out.println(res3);
+		
+		//3. 참조비교 : 메모리 주소를 비교
+
+	}
+
+}

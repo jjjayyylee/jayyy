@@ -1,0 +1,24 @@
+package exam;
+
+public class Jdbc00 {
+
+	public static void main(String[] args) {
+		Jdbc00 jdbc = new Jdbc00();
+		jdbc.insertDB();
+
+	}
+
+	private void insertDB() {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String url= "jdbc:mysql://localhost:3306/mydb";
+			String id="root";
+			String pw="0000";
+		
+		}catch(Exception ex) {
+			System.out.println("데이터 접속 실패");
+		}
+		
+	}
+
+}

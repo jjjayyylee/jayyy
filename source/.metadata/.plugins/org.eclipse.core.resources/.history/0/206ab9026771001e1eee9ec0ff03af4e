@@ -1,0 +1,10 @@
+package exam;
+
+//9. 무작위 값을 배열에 저장 후 짝수만 출력하는 프로그램 (30)
+public class T09 {
+
+	public static void main(String[] args) {
+
+
+}
+}

@@ -1,0 +1,24 @@
+package tut01;
+
+public class StringEx3 {
+
+	public static void main(String[] args) {
+		String title ="korea it academy";
+	    System.out.println(title.toUpperCase());
+	    System.out.println("---------------------------------");
+	    
+	    String menus ="Home:company:contact";
+	    //System.out.println(menus.split(":"));
+	    String[] s = menus.split(":");
+	    for(String result: s) {
+	    	System.out.println(result);
+	    }
+	    System.out.println(s[0]);
+	    System.out.println(s[1]);
+	    System.out.println(s[2]
+	    		);
+	    System.out.println(s.length);
+	    
+	}
+
+}

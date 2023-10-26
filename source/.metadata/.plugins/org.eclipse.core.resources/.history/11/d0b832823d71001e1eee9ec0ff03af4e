@@ -1,0 +1,16 @@
+package exam;
+
+import java.util.Scanner;
+
+public class pass {
+
+	public static void main(String[] args) {
+		int jumsu=70;
+		if(jumsu>=60) {
+			System.out.println("합격");
+		}else {
+			System.out.println("불합격");
+		}
+	}
+
+}

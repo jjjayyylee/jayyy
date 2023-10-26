@@ -1,0 +1,65 @@
+package testPrj;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class MemberDao {
+	
+	Scanner sc = new Scanner(System.in);
+	Connection conn = null;
+	PreparedStatement pstmt = null;
+	ResultSet rs = null;
+	DBConnect db = DBConnect.getInstance();
+	
+	
+		while(rs.next()) {
+			Member m = new Member();
+
+	//회원가입
+	int setMember() throws ClassNotFoundException, SQLException {
+		conn = db.getConnection();
+		String sql ="INSERT INTO member VALUES(NULL,?,?,?,?,?,?,now(),?);";
+		
+		Member m = new Member();
+		m.setEmail("mail@mail.com");
+		m.setPasswd("********");
+		m.setName("김철수");
+		m.setDepart("자재과");
+		m.setPosition("자재과장");
+		m.setSalary(1000000);
+		m.setEndDate(String.valueOf(LocalDate.now())); // 0000-00-00
+		
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1,m.getEmail());
+		pstmt.setString(2,m.getPasswd());
+		pstmt.setString(3,m.getName());
+		pstmt.setString(4,m.getDepart());
+		pstmt.setString(5,m.getPosition());
+		pstmt.setInt(6,m.getSalary());
+		pstmt.setString(7,m.getEndDate());
+		
+		int result = pstmt.executeUpdate();
+		
+		
+
+		
+	
+		
+
+		return result;
+
+	//종료
+	void disconnect() {
+		System.out.println("-------------------------------------------");
+		System.out.println("               프로그램 종료             ");
+		System.out.println("-------------------------------------------");
+		System.out.println("");
+		System.exit(0);
+		
+	}
+}

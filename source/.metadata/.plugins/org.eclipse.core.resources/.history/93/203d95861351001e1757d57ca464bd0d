@@ -1,0 +1,12 @@
+package tut01;
+
+public class StringEx22 {
+
+	public static void main(String[] args) {
+		String str= "korea it academy";
+		System.out.println(str.length());
+		
+		System.out.println(str.replaceAll("it", "IT"));
+	}
+
+}

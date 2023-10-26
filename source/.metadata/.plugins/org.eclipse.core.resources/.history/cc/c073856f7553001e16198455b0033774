@@ -1,0 +1,19 @@
+package tut02;
+
+public class ScopeEx {
+
+	public static void main(String[] args) {
+		// 변수가 미치는 범위{}
+		int num =10;
+		{
+			int num2=5;
+			System.out.println(num);
+		}
+		System.out.println(num);
+		System.out.println(num2);
+	
+	
+	}
+	
+
+}

@@ -1,0 +1,32 @@
+package tut01;
+
+public class StringEx {
+
+	public static void main(String[] args) {
+	// 기본타입  koreait 문자열 저장
+		// 객체타입 koreait 문자열 저장
+		//비교하는 예제
+		 String str="koreait";//stack
+		 String str2= new String("koreait");//heap
+		 
+		 //비교 A.equals(B) 값
+		 //문자열 비교 == 메모리 주소값
+		 boolean result = str==str2;
+		 if(result)
+			 System.out.println("메모리가 동일합니다.");
+		 else
+			 System.out.println("메모리 위치가 다릅니다.");
+		 //** 문자열을 제외하면 비교는 ==사용하면 됨.
+		 
+		 int num=1;
+				 int num2=2;
+				 boolean res=(num == num2);
+				 if(result);
+						 
+				
+					 
+		 
+
+	}
+
+}

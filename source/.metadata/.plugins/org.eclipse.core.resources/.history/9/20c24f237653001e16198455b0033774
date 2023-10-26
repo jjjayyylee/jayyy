@@ -1,0 +1,17 @@
+package tut02;
+
+public class ScopeEx {
+
+	public static void main(String[] args) {
+		//1~10 까지 더해서 합을 출력하시오.(한번)
+		for(int i=1; i<10; ++i) {
+			int sum=0; //총합을 저장하는 변수
+			
+			sum = sum+i
+					System.out.println(sum);
+		
+		
+	}
+	
+	}
+}

@@ -1,0 +1,19 @@
+package tut01;
+
+public class StringEx2 {
+
+	public static void main(String[] args) {
+	//이메일 형식이 맞는지 체크하는 charAt("찾을값의 인덱스")
+		String email ="mail@mail.com";
+		System.out.println(email.length());
+		
+		//.=> ~안에
+//		System.out.println(email.charAt(4));
+		if(email.charAt(4)=='@') {
+				System.out.println("사용하셔도 되는 이메일 주소입니다.");
+		}
+				else {
+			System.out.println("사용할 수 없는 이메일 주소입니다."\n다시 입력해 주세요.");
+	}
+
+}

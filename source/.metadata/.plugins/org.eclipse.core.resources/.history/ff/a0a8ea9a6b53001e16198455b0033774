@@ -1,0 +1,16 @@
+package tut02;
+
+public class VarEx {
+
+	public static void main(String[] args) {
+		//변수 : 값을 메모리에 저장하는 동작
+		// ex) 저장할 값의 타입 변수명 = 초기값;	
+		//기본형 타입: 소문자로 시작
+		//int (정수-4byte),double(실수-8byte)
+		//boolean(논리형 -1byte): true,false만 가능
+		
+		//참조형 타입 : 대문자로 시작( 단, 고정배열은 소문자로 시작)
+		// Integer(정수형 객체), Double(실수형 객체), 객체,배열...
+		}
+
+}

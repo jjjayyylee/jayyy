@@ -1,0 +1,34 @@
+package tut02;
+
+public class OperEx2 {
+
+	public static void main(String[] args) {
+		int stu1 = 80;
+		int stu2 = 70;
+		int avg = 75;
+		
+		if (stu1>= avg && stu2>=avg) {
+			System.out.println("통과");
+		}else {
+			System.out.println("재평가");
+		}
+	
+		System.out.println("=========================================");
+		
+		//학생점수가 90이상 100이하면 최우수
+		//80이상 89 이하이면 우수 나머지는 보통으로 출력하시오.
+		
+		int jumsu =88;
+		
+		if(jumsu>=90 && jumsu<=100) {
+			System.out.println("최우수");
+			
+		}else if (jumsu>=80 && jumsu<=89){
+		System.out.println("우수");
+		}else {
+			System.out.println("보통");
+		}
+		
+		
+	}
+}

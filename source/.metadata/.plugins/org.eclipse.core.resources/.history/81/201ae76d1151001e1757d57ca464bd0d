@@ -1,0 +1,11 @@
+package tut01;
+
+public class StringEx2 {
+
+	public static void main(String[] args) {
+	//이메일 형식이 맞는지 체크하는 charAt("찾을값의 인덱스")
+		String email ="mail@mail.com";
+		System.out.println(email.length());
+	}
+
+}

@@ -1,0 +1,16 @@
+package exam;
+
+public class T07 {
+
+	public static void main(String[] args) {
+		//for( char i ='a'; i<='z'; i++) {
+			//System.out.println("영문 : "+ i);
+		//}
+		char i ='a';
+		
+		do {
+			System.out.println(i++);
+		}while(i<='z');
+	}
+
+}

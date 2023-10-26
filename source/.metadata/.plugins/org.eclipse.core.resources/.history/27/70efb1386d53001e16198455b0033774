@@ -1,0 +1,21 @@
+package tut02;
+
+public class PrintEx {
+
+	public static void main(String[] args) {
+		// 정수 출력 : 10 진수, 8진수, 16진수로 출력 -> printf();
+		          //decimal, O  ,  X
+		int num =10;
+		//출력값은 10입니다.
+		System.out.printf("출력값은 %d 입니다.\n",num);
+		System.out.println(String.format("출력값은 %d 입니다.", num));
+		System.out.println("");
+		
+		//8진수 출력값은 10입니다.
+		System.out.printf("8진수 출력값은 %o입니다",num);
+		System.out.println(String.format("8진수 출력값은 %o 입니다.",num));
+		
+
+	}
+
+}

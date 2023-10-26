@@ -1,0 +1,13 @@
+package tut02;
+
+public class ScopeEx {
+
+	public static void main(String[] args) {
+		// 변수가 미치는 범위{}
+		int num =10;
+		{
+			System.out.println(num);
+		}
+	}
+
+}
